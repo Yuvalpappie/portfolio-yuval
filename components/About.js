@@ -12,7 +12,7 @@ function About() {
 
             <p className='mt-3'>
                 I am an entrepreneurial engineer and self starter who likes building beautiful user facing software.
-                I have a background in Machine Learning with a MSc in Business Analytics from the Free University of Amsterdam and worked for the past 3 years as a Data Scientist and Machine Learning Engineer at various companies.
+                I have a background in Machine Learning with a MSc in Business Analytics from the VU University of Amsterdam and worked for the past 3 years as a Data Scientist and Machine Learning Engineer at various companies.
                 Next, I started my own company {""}
                 <Link href='/projects/snibble'>
                     <a className='cursor-pointer underline'>
