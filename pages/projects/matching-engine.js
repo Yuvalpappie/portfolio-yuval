@@ -26,7 +26,7 @@ function matchingEnigne() {
 
 
                         <p className='mt-4 text-white font-semibold mb-2'>Working with the following technologies:</p>
-                        <ul class="list-disc ml-8 mb-2">
+                        <ul className="list-disc ml-8 mb-2">
                             <li>Python</li>
                             <li>SQL (Postgres)</li>
                             <li>Airflow</li>

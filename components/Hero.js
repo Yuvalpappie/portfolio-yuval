@@ -1,16 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 
+
 function Hero() {
     return (
         <>
             <div className='relative z-20 items-center flex  space-x-6 md:space-x-12 '>
                 <div>
-                    <Image src="/yuval.jpg" width={180} height={180} className='rounded-full ' />
+                    <Image src="/yuval.jpg" width={180} height={180} className='rounded-full' alt='yuval' />
                 </div>
 
                 <div className='space-y-2 md:spac-y-4'>
-                    <h1 className='text-2xl md:text-5xl font-bold'>Hi, I'm <span className='text-primary'>Yuval </span></h1>
+                    <h1 className='text-2xl md:text-5xl font-bold'>Hi, I&apos;m <span className='text-primary'>Yuval </span></h1>
                     <p className=' text-lg md:text-xl'>A passionate Software Engineer from Amsterdam</p>
                 </div>
 

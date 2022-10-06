@@ -18,7 +18,7 @@ function Snibble() {
                             Visit the Snibble website here
                         </a>
                         <p className='mt-4 text-white font-semibold mb-2'>Working with the following technologies:</p>
-                        <ul class="list-disc ml-8 mb-2">
+                        <ul className="list-disc ml-8 mb-2">
                             <li>React Native</li>
                             <li>Firebase</li>
                             <li>(Tailwind)CSS</li>
@@ -31,7 +31,7 @@ function Snibble() {
                     </div>
 
                     <div className=' md:space-y-4 mt-4'>
-                        <Image src="/home2.png" width={190} height={400} className='' />
+                        <Image src="/home2.png" width={190} height={400} className='' alt='Snibble' />
                     </div>
 
                 </div>

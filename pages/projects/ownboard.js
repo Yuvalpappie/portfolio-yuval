@@ -16,7 +16,7 @@ function Ownboard() {
                         <p className='mb-2'> I designed and implemented the datamodel, challenged the feature list, and built the MVP that can be tested within organisations.</p>
 
                         <p className='mt-4 text-white font-semibold mb-2'>Working with the following technologies:</p>
-                        <ul class="list-disc ml-8 mb-2">
+                        <ul className="list-disc ml-8 mb-2">
                             <li>NextJS</li>
                             <li>Firebase</li>
                             <li>TailwindCSS</li>
@@ -27,7 +27,7 @@ function Ownboard() {
                     </div>
 
                     <div className=' md:space-y-4'>
-                        <Image src="/card.png" width={220} height={300} className='rounded-lg' />
+                        <Image src="/card.png" width={220} height={300} className='rounded-lg' alt='Ownboard' />
                     </div>
 
                 </div>
