@@ -46,7 +46,7 @@ function matchingEnigne() {
 
                 {/* BackBlur */}
                 <div className="absolute w-full max-w-lg z-0">
-                    <div className="absolute  -left-4 w-[800px] h-[200px] bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-[20%] animate-blob"></div>
+                    <div className="absolute  -left-4 sm:w-[600px] md:w-[800px] w-[400px] h-[150px] mt-10 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-[20%] animate-blob"></div>
                 </div >
             </div>
         </>
