@@ -5,7 +5,7 @@ function DecisionSupport() {
     return (
         <>
             <div className="flex max-w-[400px] md:max-w-[700px] mx-auto mb-16 mt-24">
-                <div className='relative z-20  flex flex-col lg:flex lg:flex-row  space-x-6 md:space-x-12 '>
+                <div className='relative z-20 items-center  flex flex-col lg:flex lg:flex-row  space-x-6 md:space-x-12 '>
                     <div className='w-[70%]'>
                         <h1 className='text-2xl md:text-5xl font-bold mb-4'>Decision Support</h1>
                         <p className='mb-4 '>
@@ -35,7 +35,7 @@ function DecisionSupport() {
 
                     </div>
 
-                    <div className=' md:space-y-4 mt-16'>
+                    <div className=' md:space-y-4 mt-8'>
                         <Image src="/DSE.png" width={250} height={250} className='' alt='Decision Support' />
                     </div>
 

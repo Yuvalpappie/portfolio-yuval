@@ -6,7 +6,7 @@ function Ownboard() {
         <>
             <div className="flex max-w-[400px] md:max-w-[700px] mx-auto mb-16 mt-24">
                 <div className='relative z-20 items-center  flex flex-col lg:flex lg:flex-row  space-x-6 md:space-x-12 '>
-                    <div className='w-[80%]'>
+                    <div className='w-[70%]'>
                         <h1 className='text-2xl md:text-5xl font-bold mb-4'>Ownboard</h1>
                         <p className='mb-4 '>
                             Developed the first version of a MVP for a HR tech startup focussing on employee onboarding software. Ownboard solves the problem of creating, maintaning and monitoring onboarding processes.
@@ -26,7 +26,7 @@ function Ownboard() {
 
                     </div>
 
-                    <div className=' md:space-y-4'>
+                    <div className=' md:space-y-4 mt-8'>
                         <Image src="/card.png" width={220} height={300} className='rounded-lg' alt='Ownboard' />
                     </div>
 

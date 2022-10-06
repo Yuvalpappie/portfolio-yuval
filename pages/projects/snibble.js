@@ -30,7 +30,7 @@ function Snibble() {
 
                     </div>
 
-                    <div className=' md:space-y-4 mt-4'>
+                    <div className=' md:space-y-4 mt-8'>
                         <Image src="/home2.png" width={190} height={400} className='' alt='Snibble' />
                     </div>
 
