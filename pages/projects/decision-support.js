@@ -35,7 +35,7 @@ function DecisionSupport() {
 
                     </div>
 
-                    <div className=' md:space-y-4 mt-8'>
+                    <div className=' md:space-y-4 mt-2'>
                         <Image src="/DSE.png" width={250} height={250} className='' alt='Decision Support' />
                     </div>
 
