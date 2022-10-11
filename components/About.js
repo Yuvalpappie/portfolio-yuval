@@ -19,13 +19,8 @@ function About() {
                         Snibble
                     </a>
                 </Link>.
-                I have a passion for AI, Software Engineering and Design.
+                I have a keen interest in Software Engineering, AI, Crypto, and Design.
             </p>
-            {/* <p className='mt-3'>
-                I have strong communication skills and I am a fast learner who likes to make products from end to end which resulted in making and launching multiple products.
-
-            </p> */}
-
         </div>
     )
 }
