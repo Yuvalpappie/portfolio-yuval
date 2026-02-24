@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🖥️ Yuval Pappie - Hacker Portfolio
 
-## Getting Started
+A cyberpunk-inspired terminal portfolio showcasing full-stack development skills and projects.
 
-First, run the development server:
+## ⚡ Features
+
+- **Terminal-style interface** with animated typing
+- **Matrix-inspired background** effects and scanlines
+- **Interactive timeline** instead of project cards
+- **Animated skill loading** with progress bars
+- **Cyberpunk color scheme** (green, cyan, amber)
+- **Responsive design** for all devices
+- **Performance optimized** with Next.js
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
+
+# Build for production
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design Philosophy
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The new design embraces a **hacker retro aesthetic** with:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Terminal aesthetics**: Command-line interface styling
+- **Matrix effects**: Subtle background animations
+- **Timeline format**: Career and projects displayed chronologically
+- **Interactive elements**: Expandable sections and hover effects
+- **Cyberpunk colors**: Green terminals, cyan highlights, amber warnings
+- **Monospace fonts**: JetBrains Mono for authentic terminal feel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📱 Sections
 
-## Learn More
+1. **Terminal Header** - Animated introduction with system info
+2. **Timeline** - Interactive career and project history
+3. **Skills** - Animated loading of technical expertise
+4. **Contact** - Retro communication protocols interface
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: Next.js 14
+- **Styling**: TailwindCSS with custom cyberpunk theme
+- **Fonts**: JetBrains Mono (terminal aesthetic)
+- **Animations**: CSS keyframes + React state management
+- **Hosting**: Vercel (recommended)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🎯 Customization
 
-## Deploy on Vercel
+Edit the data in each component to update:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `components/Terminal.js` - Bio and introduction
+- `components/Timeline.js` - Projects and career history
+- `components/Skills.js` - Technical skills and proficiency
+- `components/Contact.js` - Contact methods and form
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🌐 Deployment
+
+The site is optimized for Vercel deployment:
+
+```bash
+# Deploy to Vercel
+vercel --prod
+```
+
+## 🔧 Development Notes
+
+- All animations use CSS keyframes for performance
+- Components are modular and easily customizable
+- Responsive design works on mobile and desktop
+- Accessibility considerations included
+- SEO optimized with proper meta tags
+
+---
+
+**Status**: ● ONLINE | **Last Update**: 2024 | **Version**: 2.0.0
