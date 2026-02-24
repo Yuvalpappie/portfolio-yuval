@@ -179,7 +179,7 @@ export default function Contact() {
             </div>
             
             <div className="mt-4 text-cyan-400 text-sm animate-pulse">
-              yuval@amsterdam:~$ echo "Thanks for visiting!" && exit
+              yuval@amsterdam:~$ echo &quot;Thanks for visiting!&quot; && exit
             </div>
           </div>
         </>

@@ -11,9 +11,6 @@ export default function Home() {
         <title>yuval@amsterdam:~$ whoami</title>
         <meta name="description" content="Yuval Pappie - Full Stack Engineer & AI Enthusiast" />
         <link rel="icon" href="/terminal-icon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
       </Head>
 
       {/* Matrix rain background */}

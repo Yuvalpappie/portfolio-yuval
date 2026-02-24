@@ -1,37 +1,39 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+
+const skillCategories = {
+  'Frontend': {
+    skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'React Native'],
+    proficiency: [95, 90, 88, 92, 85]
+  },
+  'Backend': {
+    skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Redis'],
+    proficiency: [90, 95, 85, 80, 82]
+  },
+  'AI/ML': {
+    skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'Computer Vision'],
+    proficiency: [85, 80, 90, 78, 75]
+  },
+  'DevOps': {
+    skills: ['Docker', 'AWS', 'Kubernetes', 'CI/CD', 'Linux'],
+    proficiency: [88, 82, 75, 85, 90]
+  },
+  'Tools': {
+    skills: ['Git', 'VS Code', 'Figma', 'Postman', 'Firebase'],
+    proficiency: [95, 90, 85, 88, 87]
+  }
+}
 
 export default function Skills() {
   const [loadingSkill, setLoadingSkill] = useState('')
   const [loadedSkills, setLoadedSkills] = useState(new Set())
 
-  const skillCategories = {
-    'Frontend': {
-      skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'React Native'],
-      proficiency: [95, 90, 88, 92, 85]
-    },
-    'Backend': {
-      skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Redis'],
-      proficiency: [90, 95, 85, 80, 82]
-    },
-    'AI/ML': {
-      skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'Computer Vision'],
-      proficiency: [85, 80, 90, 78, 75]
-    },
-    'DevOps': {
-      skills: ['Docker', 'AWS', 'Kubernetes', 'CI/CD', 'Linux'],
-      proficiency: [88, 82, 75, 85, 90]
-    },
-    'Tools': {
-      skills: ['Git', 'VS Code', 'Figma', 'Postman', 'Firebase'],
-      proficiency: [95, 90, 85, 88, 87]
-    }
-  }
+  const allSkills = useMemo(() => 
+    Object.entries(skillCategories).flatMap(([category, data]) => 
+      data.skills.map(skill => ({ skill, category }))
+    ), []
+  )
 
   useEffect(() => {
-    const allSkills = Object.entries(skillCategories).flatMap(([category, data]) => 
-      data.skills.map(skill => ({ skill, category }))
-    )
-    
     let index = 0
     const loadSkills = () => {
       if (index < allSkills.length) {
@@ -50,7 +52,7 @@ export default function Skills() {
 
     const timer = setTimeout(loadSkills, 1000)
     return () => clearTimeout(timer)
-  }, [])
+  }, [allSkills])
 
   const ProgressBar = ({ skill, proficiency, isLoaded }) => (
     <div className="mb-3">
@@ -83,7 +85,7 @@ export default function Skills() {
     <div className="mb-12">
       <div className="mb-6">
         <div className="text-cyan-400 text-lg mb-2">
-          yuval@amsterdam:~$ sudo apt list --installed | grep -E "(skills|expertise)"
+          yuval@amsterdam:~$ sudo apt list --installed | grep -E &quot;(skills|expertise)&quot;
         </div>
         {loadingSkill && (
           <div className="text-yellow-400 text-sm mb-2 animate-pulse">

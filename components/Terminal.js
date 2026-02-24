@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 export default function Terminal() {
   const [currentLine, setCurrentLine] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
 
-  const lines = [
+  const lines = useMemo(() => [
     '> initializing connection...',
     '> loading profile data...',
     '> decrypting personal files...',
@@ -30,7 +30,7 @@ export default function Terminal() {
     '│ Interests:      [AI, Startups, Crypto, Tech]                │',
     '│ Current Focus:  Building beautiful software                  │',
     '└───────────────────────────────────────────────────────────────┘',
-  ]
+  ], [])
 
   useEffect(() => {
     const timer = setInterval(() => {
