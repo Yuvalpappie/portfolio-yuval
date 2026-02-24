@@ -67,7 +67,7 @@ export default function Contact() {
       {/* Connection Details */}
       <div className="border border-green-400 bg-gray-900 bg-opacity-50 p-3 sm:p-6 rounded-lg mb-6 overflow-x-auto">
         <div className="text-green-400 font-bold mb-4 text-sm sm:text-base">
-          <span className="whitespace-nowrap">┌─ AVAILABLE COMMUNICATION PROTOCOLS ─────────────────────────┐</span>
+          <span className="whitespace-nowrap">┌─ CONTACT ───────────────────────────────────────────────────┐</span>
         </div>
         
         <div className="space-y-3 mb-4">
@@ -104,25 +104,8 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="text-center">
-        <div className="text-green-400 text-sm mb-2 overflow-x-auto">
-          <span className="whitespace-nowrap">┌─ SESSION INFO ─────────────────────────────────────────────────┐</span>
-        </div>
-        <div className="text-gray-400 text-xs space-y-1">
-          <div className="overflow-x-auto">
-            <span className="whitespace-nowrap">Last updated: {new Date().toISOString().split('T')[0]}</span>
-          </div>
-          <div>Server: amsterdam.yuval.local</div>
-          <div>Status: Ready for new adventures 🚀</div>
-        </div>
-        <div className="text-green-400 text-sm mt-2 overflow-x-auto">
-          <span className="whitespace-nowrap">└────────────────────────────────────────────────────────────────┘</span>
-        </div>
-        
-        <div className="mt-4 text-cyan-400 text-sm animate-pulse overflow-x-auto">
-          <span className="whitespace-nowrap">yuval@amsterdam:~$ echo &quot;Thanks for visiting!&quot; && exit</span>
-        </div>
+      <div className="mt-4 text-center text-cyan-400 text-sm animate-pulse overflow-x-auto">
+        <span className="whitespace-nowrap">yuval@amsterdam:~$ echo &quot;Thanks for visiting!&quot; && exit</span>
       </div>
     </div>
   )
