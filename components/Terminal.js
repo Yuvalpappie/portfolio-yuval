@@ -21,14 +21,11 @@ export default function Terminal() {
     '',
     '┌─ SYSTEM INFO ─────────────────────────────────────────────────┐',
     '│ Name:           Yuval Pappie                                  │',
-    '│ Age:            31                                            │',
     '│ Location:       Amsterdam, NL                                │',
     '│ Status:         Building the future                         │',
     '│ Role:           Full Stack Software Engineer                  │',
     '│ Background:     MSc Business Analytics (VU Amsterdam)        │',
-    '│ Past:           Company Founder (Snibble)                    │',
-    '│ Interests:      [AI, Startups, Crypto, Tech]                │',
-    '│ Current Focus:  Building beautiful software                  │',
+    '│ Interests:      [AI, Startups, Tech]                        │',
     '└───────────────────────────────────────────────────────────────┘',
   ], [])
 
@@ -78,9 +75,9 @@ export default function Terminal() {
         </div>
 
         {/* Terminal content */}
-        <div className="space-y-1 min-h-[300px] sm:min-h-[400px]">
+        <div className="space-y-1 min-h-[300px] sm:min-h-[400px] overflow-x-auto">
           {lines.slice(0, currentLine).map((line, index) => (
-            <div key={index} className="flex overflow-x-auto">
+            <div key={index} className="flex">
               <span className={`
                 ${line.startsWith('>') ? 'text-cyan-400' : ''}
                 ${line.startsWith('yuval@') ? 'text-yellow-400' : ''}
@@ -96,7 +93,7 @@ export default function Terminal() {
           ))}
           
           {currentLine < lines.length && (
-            <div className="flex overflow-x-auto">
+            <div className="flex">
               <span className={`
                 ${lines[currentLine]?.startsWith('>') ? 'text-cyan-400' : ''}
                 ${lines[currentLine]?.startsWith('yuval@') ? 'text-yellow-400' : ''}
