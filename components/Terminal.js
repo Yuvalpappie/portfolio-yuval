@@ -23,7 +23,7 @@ export default function Terminal() {
     '│ Name:           Yuval Pappie                                  │',
     '│ Age:            31                                            │',
     '│ Location:       Amsterdam, NL                                │',
-    '│ Status:         Married + 2 kids (1.5y, 1mo)                │',
+    '│ Status:         Building the future                         │',
     '│ Role:           Full Stack Software Engineer                  │',
     '│ Background:     MSc Business Analytics (VU Amsterdam)        │',
     '│ Past:           Company Founder (Snibble)                    │',
@@ -63,8 +63,8 @@ export default function Terminal() {
   }
 
   return (
-    <div className="mb-12">
-      <div className="bg-gray-900 border-2 border-green-400 rounded-lg p-6 shadow-2xl">
+    <div className="mb-8 sm:mb-12">
+      <div className="bg-gray-900 border-2 border-green-400 rounded-lg p-3 sm:p-6 shadow-2xl overflow-x-auto">
         {/* Terminal header */}
         <div className="flex items-center mb-4 border-b border-green-400 pb-2">
           <div className="flex space-x-2">
@@ -78,9 +78,9 @@ export default function Terminal() {
         </div>
 
         {/* Terminal content */}
-        <div className="space-y-1 min-h-[400px]">
+        <div className="space-y-1 min-h-[300px] sm:min-h-[400px]">
           {lines.slice(0, currentLine).map((line, index) => (
-            <div key={index} className="flex">
+            <div key={index} className="flex overflow-x-auto">
               <span className={`
                 ${line.startsWith('>') ? 'text-cyan-400' : ''}
                 ${line.startsWith('yuval@') ? 'text-yellow-400' : ''}
@@ -88,7 +88,7 @@ export default function Terminal() {
                 ${line.includes('┌') || line.includes('│') || line.includes('└') ? 'text-blue-400' : ''}
                 ${line.includes('YUVAL PAPPIE') ? 'text-white font-bold text-center' : ''}
                 ${line.includes('Full Stack Engineer') || line.includes('Amsterdam, Netherlands') ? 'text-gray-300 text-center' : ''}
-                whitespace-pre
+                whitespace-pre text-xs sm:text-sm
               `}>
                 {line}
               </span>
@@ -96,7 +96,7 @@ export default function Terminal() {
           ))}
           
           {currentLine < lines.length && (
-            <div className="flex">
+            <div className="flex overflow-x-auto">
               <span className={`
                 ${lines[currentLine]?.startsWith('>') ? 'text-cyan-400' : ''}
                 ${lines[currentLine]?.startsWith('yuval@') ? 'text-yellow-400' : ''}
@@ -104,7 +104,7 @@ export default function Terminal() {
                 ${lines[currentLine]?.includes('┌') || lines[currentLine]?.includes('│') || lines[currentLine]?.includes('└') ? 'text-blue-400' : ''}
                 ${lines[currentLine]?.includes('YUVAL PAPPIE') ? 'text-white font-bold' : ''}
                 ${lines[currentLine]?.includes('Full Stack Engineer') || lines[currentLine]?.includes('Amsterdam, Netherlands') ? 'text-gray-300' : ''}
-                whitespace-pre
+                whitespace-pre text-xs sm:text-sm
               `}>
                 {displayText}
                 {showCursor && <span className="bg-green-400 text-black">█</span>}

@@ -74,60 +74,60 @@ export default function Timeline() {
   ]
 
   return (
-    <div className="mb-12">
+    <div className="mb-8 sm:mb-12">
       <div className="mb-6">
-        <div className="text-cyan-400 text-lg mb-2">
-          yuval@amsterdam:~$ ./show_timeline.sh --type=all
+        <div className="text-cyan-400 text-base sm:text-lg mb-2 overflow-x-auto">
+          <span className="whitespace-nowrap">yuval@amsterdam:~$ ./show_timeline.sh --type=all</span>
         </div>
-        <div className="text-green-400">
-          ┌─ CAREER & PROJECTS TIMELINE ─────────────────────────────────┐
+        <div className="text-green-400 text-sm sm:text-base overflow-x-auto">
+          <span className="whitespace-nowrap">┌─ CAREER & PROJECTS TIMELINE ─────────────────────────────────┐</span>
         </div>
       </div>
 
       <div className="relative">
         {/* Timeline line */}
-        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-green-400 opacity-50"></div>
+        <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-green-400 opacity-50"></div>
 
         {timelineItems.map((item, index) => (
           <div key={item.id} className="relative mb-8">
             {/* Timeline dot */}
-            <div className="absolute left-6 w-4 h-4 bg-green-400 rounded-full border-2 border-black flex items-center justify-center">
+            <div className="absolute left-4 sm:left-6 w-4 h-4 bg-green-400 rounded-full border-2 border-black flex items-center justify-center">
               <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
             </div>
 
             {/* Content */}
-            <div className="ml-16 border border-green-400 bg-gray-900 bg-opacity-50 p-4 rounded-lg hover:bg-opacity-70 transition-all cursor-pointer"
+            <div className="ml-12 sm:ml-16 border border-green-400 bg-gray-900 bg-opacity-50 p-3 sm:p-4 rounded-lg hover:bg-opacity-70 transition-all cursor-pointer"
                  onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}>
               
               {/* Header */}
               <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center space-x-4">
-                  <span className="text-yellow-400 font-mono text-sm">[{item.year}]</span>
-                  <span className={`text-xs px-2 py-1 rounded ${
+                <div className="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-1">
+                  <span className="text-yellow-400 font-mono text-xs sm:text-sm whitespace-nowrap">[{item.year}]</span>
+                  <span className={`text-xs px-1 sm:px-2 py-1 rounded whitespace-nowrap ${
                     item.type === 'PROJECT' ? 'bg-blue-900 text-blue-300' :
                     item.type === 'CAREER' ? 'bg-purple-900 text-purple-300' :
                     'bg-green-900 text-green-300'
                   }`}>
                     {item.type}
                   </span>
-                  <span className="text-cyan-400 text-xs">{item.status}</span>
+                  <span className="text-cyan-400 text-xs whitespace-nowrap hidden sm:inline">{item.status}</span>
                 </div>
-                <div className="text-green-400 text-sm">
+                <div className="text-green-400 text-sm flex-shrink-0">
                   {selectedItem === item.id ? '[−]' : '[+]'}
                 </div>
               </div>
 
               {/* Title and Company */}
-              <h3 className="text-white font-bold text-lg mb-1">{item.title}</h3>
+              <h3 className="text-white font-bold text-base sm:text-lg mb-1 break-words">{item.title}</h3>
               <p className="text-gray-400 text-sm mb-2">{item.company}</p>
               
               {/* Description */}
               <p className="text-green-300 text-sm mb-3">{item.description}</p>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-3">
+              <div className="flex flex-wrap gap-1 sm:gap-2 mb-3">
                 {item.tech.map((tech) => (
-                  <span key={tech} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-600">
+                  <span key={tech} className="text-xs bg-gray-800 text-gray-300 px-1 sm:px-2 py-1 rounded border border-gray-600 whitespace-nowrap">
                     {tech}
                   </span>
                 ))}
@@ -155,8 +155,8 @@ export default function Timeline() {
         ))}
       </div>
 
-      <div className="text-green-400 mt-6">
-        └───────────────────────────────────────────────────────────────┘
+      <div className="text-green-400 mt-6 text-sm sm:text-base overflow-x-auto">
+        <span className="whitespace-nowrap">└───────────────────────────────────────────────────────────────┘</span>
       </div>
 
       <style jsx>{`
