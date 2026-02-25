@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Contact() {
   const [connectionStatus, setConnectionStatus] = useState('INITIALIZING')
@@ -8,7 +8,6 @@ export default function Contact() {
       'INITIALIZING',
       'SCANNING NETWORKS',
       'ESTABLISHING SECURE CONNECTION',
-      'CONNECTION ESTABLISHED'
     ]
 
     let index = 0
@@ -29,11 +28,11 @@ export default function Contact() {
   const contactMethods = [
     {
       protocol: 'EMAIL',
-      address: 'yuval.pappie@gmail.com',
+      address: 'pappieyuval@gmail.com',
       port: '587',
-      status: 'SECURE',
+      status: 'ACTIVE',
       icon: '📧',
-      link: 'mailto:yuval.pappie@gmail.com'
+      link: 'mailto:pappieyuval@gmail.com'
     },
     {
       protocol: 'LINKEDIN',
@@ -41,7 +40,7 @@ export default function Contact() {
       port: '443',
       status: 'ACTIVE',
       icon: '💼',
-      link: 'https://linkedin.com/in/yuvalpappie'
+      link: 'https://www.linkedin.com/in/yuval-pappie-30025673/'
     },
     {
       protocol: 'GITHUB',
@@ -54,18 +53,15 @@ export default function Contact() {
   ]
 
   return (
-    <div className="mb-8">
-      <div className="mb-6">
-        <div className="text-cyan-400 text-base sm:text-lg mb-2 overflow-x-auto">
+    <div>
+      <div className="mb-8">
+        <div className="text-cyan-400 text-base sm:text-sm mb-2 overflow-x-auto">
           <span className="whitespace-nowrap">yuval@amsterdam:~$ ./establish_connection.sh --remote --secure</span>
-        </div>
-        <div className="text-yellow-400 text-sm mb-4 animate-pulse">
-          Status: {connectionStatus}...
         </div>
       </div>
 
       {/* Connection Details */}
-      <div className="border border-green-400 bg-gray-900 bg-opacity-50 p-3 sm:p-6 rounded-lg mb-6 overflow-x-auto">
+      <div className="border border-purple-400 bg-gray-900 bg-opacity-50 p-3 sm:p-6 rounded-lg mb-6 overflow-x-auto">
         <div className="text-green-400 font-bold mb-4 text-sm sm:text-base">
           <span className="whitespace-nowrap">┌─ CONTACT ───────────────────────────────────────────────────┐</span>
         </div>

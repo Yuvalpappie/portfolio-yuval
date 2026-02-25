@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 export default function Terminal() {
   const [currentLine, setCurrentLine] = useState(0)
@@ -8,24 +8,21 @@ export default function Terminal() {
   const lines = useMemo(() => [
     '> initializing connection...',
     '> loading profile data...',
-    '> decrypting personal files...',
     '> access granted.',
     '',
     '╔═══════════════════════════════════════════════════════════════╗',
     '║                      YUVAL PAPPIE                             ║',
     '║                 Full Stack Engineer                           ║',
-    '║               Amsterdam, Netherlands                          ║',
     '╚═══════════════════════════════════════════════════════════════╝',
     '',
     'yuval@amsterdam:~$ cat /etc/about.txt',
     '',
     '┌─ SYSTEM INFO ─────────────────────────────────────────────────┐',
     '│ Name:           Yuval Pappie                                  │',
-    '│ Location:       Amsterdam, NL                                │',
-    '│ Status:         Building the future                         │',
+    '│ Location:       Amsterdam, NL                                 │',
     '│ Role:           Full Stack Software Engineer                  │',
-    '│ Background:     MSc Business Analytics (VU Amsterdam)        │',
-    '│ Interests:      [AI, Startups, Tech]                        │',
+    '│ Background:     MSc Business Analytics (VU Amsterdam)         │',
+    '│ Interests:      [AI, Startups, Tech]                          │',
     '└───────────────────────────────────────────────────────────────┘',
   ], [])
 
@@ -60,7 +57,7 @@ export default function Terminal() {
   }
 
   return (
-    <div className="mb-8 sm:mb-12">
+    <div className="mb-4">
       <div className="bg-gray-900 border-2 border-green-400 rounded-lg p-3 sm:p-6 shadow-2xl overflow-x-auto">
         {/* Terminal header */}
         <div className="flex items-center mb-4 border-b border-green-400 pb-2">
