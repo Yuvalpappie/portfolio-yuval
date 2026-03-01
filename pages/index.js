@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Terminal from '../components/Terminal'
-import Contact from '../components/Contact'
 
 export default function Home() {
   return (
@@ -17,9 +16,8 @@ export default function Home() {
       {/* Scanlines effect */}
       <div className="scanlines fixed inset-0 z-10 pointer-events-none" />
 
-      <div className="relative z-20 max-w-4xl mx-auto px-2 sm:px-4 py-4 sm:py-8 overflow-x-hidden">
+      <div className="relative z-20 max-w-5xl mx-auto px-2 sm:px-4 py-4 sm:py-8 overflow-x-hidden">
         <Terminal />
-        <Contact />
       </div>
 
       <style jsx>{`
