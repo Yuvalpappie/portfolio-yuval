@@ -7,11 +7,8 @@ export default function Terminal() {
   const [terminalGlow, setTerminalGlow] = useState(false)
 
   const lines = useMemo(() => [
-    '> BIOS v2.1.337 - INITIALIZING...',
-    '> Loading bootloader...',
-    '> Mounting filesystems...',
-    '> Starting network services...',
-    '> Establishing secure connection...',
+    '> INITIALIZING...',
+    '> LOADING SYSTEM...',
     '> ACCESS GRANTED.',
     '',
     '╔═══════════════════════════════════════════════════════════════╗',
@@ -31,24 +28,14 @@ export default function Terminal() {
     '┌─ SYSTEM SPECIFICATIONS ───────────────────────────────────────┐',
     '│ Name:           Yuval Pappie                                  │',
     '│ Location:       Amsterdam, NL                                │',
-    '│ Status:         Building the future                         │',
     '│ Role:           Full Stack Software Engineer                  │',
     '│ Background:     MSc Business Analytics (VU Amsterdam)        │',
     '│ Interests:      [AI, Startups, Tech]                        │',
-    '│ Runtime:        Available for new opportunities              │',
     '└───────────────────────────────────────────────────────────────┘',
-    '',
-    'yuval@amsterdam:~$ ls -la /dev/contact/',
-    '',
-    'drwxr-xr-x 3 yuval yuval  4096 Mar  1 13:18 .',
-    'drwxr-xr-x 8 root  root   4096 Mar  1 13:18 ..',
-    '-rw-r--r-- 1 yuval yuval    42 Mar  1 13:18 email.link',
-    '-rw-r--r-- 1 yuval yuval    38 Mar  1 13:18 linkedin.link', 
-    '-rw-r--r-- 1 yuval yuval    35 Mar  1 13:18 github.link',
     '',
     'yuval@amsterdam:~$ cat /dev/contact/*.link',
     '',
-    '📧 EMAIL    → yuval.pappie@gmail.com',
+    '📧 EMAIL    → pappieyuval@gmail.com',
     '💼 LINKEDIN → linkedin.com/in/yuvalpappie',  
     '👨‍💻 GITHUB   → github.com/Yuvalpappie',
     '',
@@ -60,7 +47,7 @@ export default function Terminal() {
   ], [])
 
   const contactLinks = {
-    'yuval.pappie@gmail.com': 'mailto:yuval.pappie@gmail.com',
+    'pappieyuval@gmail.com': 'mailto:pappieyuval@gmail.com',
     'linkedin.com/in/yuvalpappie': 'https://linkedin.com/in/yuvalpappie', 
     'github.com/Yuvalpappie': 'https://github.com/Yuvalpappie'
   }
@@ -76,7 +63,7 @@ export default function Terminal() {
           setCurrentLine(currentLine + 1)
         }
       }
-    }, currentLine < 6 ? 80 : 40) // Slower for boot sequence
+    }, currentLine < 3 ? 60 : 20) // Faster overall
 
     return () => clearInterval(timer)
   }, [currentLine, displayText, lines])
